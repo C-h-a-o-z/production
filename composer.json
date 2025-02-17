@@ -49,8 +49,9 @@
         "sort-packages": true
     },
     "scripts": {
-        "auto-scripts": [
-        ],
+        "auto-scripts": {
+            "assets:install": "symfony-cmd"
+        },
         "post-install-cmd": [
             "@auto-scripts"
         ],
