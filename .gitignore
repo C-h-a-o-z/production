@@ -17,4 +17,6 @@
 /auth.json
 /install.lock
 public/asset-manifest.json
+/custom/plugins/SwagPayPal
+/custom/plugins/SwagLanguagePack
 ###< shopware/core ###
