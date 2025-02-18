@@ -19,4 +19,6 @@
 public/asset-manifest.json
 /custom/plugins/SwagPayPal
 /custom/plugins/SwagLanguagePack
+/custom/plugins/SwagPlatformDemoData
+/custom/plugins/SwagExtensionStore
 ###< shopware/core ###
