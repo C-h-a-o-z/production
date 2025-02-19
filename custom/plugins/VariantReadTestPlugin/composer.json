@@ -1,0 +1,27 @@
+{
+    "name": "variant-read-test-plugin/variant-read-test-plugin",
+    "description": "variant-read-test-plugin/variant-read-test-plugin",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "VariantReadTestPlugin\\VariantReadTestPlugin",
+        "label": {
+            "de-DE": "Custom skeleton plugin",
+            "en-GB": "Custom skeleton plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "VariantReadTestPlugin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VariantReadTestPlugin\\Tests\\": "tests/"
+        }
+    }
+}

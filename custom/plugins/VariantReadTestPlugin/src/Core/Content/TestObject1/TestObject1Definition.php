@@ -1,0 +1,41 @@
+<?php declare(strict_types=1);
+
+namespace VariantReadTestPlugin\Core\Content\TestObject1;
+
+use Shopware\Core\Framework\DataAbstractionLayer\EntityDefinition;
+use Shopware\Core\Framework\DataAbstractionLayer\FieldCollection;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\BoolField;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\PrimaryKey;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\Flag\Required;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\IdField;
+use Shopware\Core\Framework\DataAbstractionLayer\Field\StringField;
+
+class TestObject1Definition extends EntityDefinition
+{
+    public const ENTITY_NAME = 'test_object1';
+
+    public function getEntityName(): string
+    {
+        return self::ENTITY_NAME;
+    }
+
+    public function getEntityClass(): string
+    {
+        return TestObject1Entity::class;
+    }
+
+    public function getCollectionClass(): string
+    {
+        return TestObject1Collection::class;
+    }
+
+    protected function defineFields(): FieldCollection
+    {
+        return new FieldCollection([
+            (new IdField('id', 'id'))->addFlags(new Required(), new PrimaryKey()),
+            (new StringField('name', 'name')),
+            (new StringField('description', 'description')),
+            (new BoolField('active', 'active'))
+        ]);
+    }
+}
